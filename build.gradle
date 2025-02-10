@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+java.sourceCompatibility = 22
+java.targetCompatibility = 22
+
+group = 'ru.nloktionov'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'commons-cli:commons-cli:1.9.0'
+
+    compileOnly 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "ru.nloktionov.Main"
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
