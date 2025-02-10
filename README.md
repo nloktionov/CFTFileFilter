@@ -23,6 +23,10 @@ java -jar CFTFileFilter.jar in1.txt in2.txt
 
 где `in1.txt in2.txt` — входные файлы для обработки.
 
+> [!NOTE]  
+> В релизах доступен [собранный JAR файл](https://github.com/nloktionov/CFTFileFilter/releases/tag/1.0)
+
+
 ## Аргументы командной строки
 
 Приложение поддерживает следующие аргументы:
@@ -36,5 +40,3 @@ java -jar CFTFileFilter.jar in1.txt in2.txt
 | `-p <prefix>` | Префикс выходных файлов                     |
 | `<files>`     | Список файлов для фильтрации                |
 
-> [!NOTE]  
-> В релизах доступен [собранный JAR файл](https://github.com/nloktionov/CFTFileFilter/releases/tag/1.0)
